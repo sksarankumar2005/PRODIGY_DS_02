@@ -4,22 +4,25 @@
 
 <img src="Prodigy_task_02.png" alt="Banner" style="width:100%; max-width:700px;">
 
-Hi there!   
-I'm **Sarankumar**, and this repository showcases my submission for **Task 1** of the **Prodigy Infotech Data Science Internship**. In this task, I explored a real-world dataset and used data analysis and visualization techniques to uncover some interesting patterns.
+Hi there!  
+I'm **Sarankumar**, and this repository showcases my submission for **Task 2** of the **Prodigy Infotech Data Science Internship**. In this task, I performed **Data Cleaning**, **Exploratory Data Analysis (EDA)**, and **Machine Learning Modeling** on the famous Titanic dataset to uncover trends and build a predictive model.
 
 ---
 
 ## 🌍 About the Dataset
 
-I worked with the [**Titanic Dataset**](https://www.kaggle.com/c/titanic/data), which contains population statistics of various countries as of 2022. Some of the key features in the dataset include:
+I worked with the [**Titanic Dataset**](https://www.kaggle.com/c/titanic/data), which contains information about passengers aboard the RMS Titanic. Some of the key features in the dataset include:
 
-- Total population  
-- Yearly population change (%)  
-- Population density  
-- Fertility rate  
-- Median age  
-- Urban population share  
-- World population share  
+- PassengerId  
+- Survived (target variable)  
+- Pclass (ticket class)  
+- Name  
+- Sex  
+- Age  
+- SibSp (siblings/spouses aboard)  
+- Parch (parents/children aboard)  
+- Fare  
+- Embarked (port of embarkation)  
 ... and more!
 
 ---
@@ -29,44 +32,70 @@ I worked with the [**Titanic Dataset**](https://www.kaggle.com/c/titanic/data), 
 This project was completed using Python in a Jupyter Notebook environment, with the help of:
 
 - `pandas` and `numpy` for handling and cleaning data  
-- `matplotlib` and `seaborn` for creating visualizations  
-- Jupyter Notebook for organizing and presenting my analysis
+- `matplotlib` and `seaborn` for visualizations  
+- `scikit-learn` for building and evaluating ML models  
+- Jupyter Notebook for coding and presenting the analysis  
 
 ---
 
 ## 🔍 What I Did – A Quick Walkthrough
 
 ### 1. **Getting to Know the Data**
-First, I took a look at the structure of the dataset, explored the columns, and identified any missing or inconsistent values.
+- Loaded the dataset using `pandas`  
+- Explored data structure and column types  
+- Identified missing values and nulls
 
 ### 2. **Cleaning Things Up**
-I handled nulls, converted data types where necessary, and made sure everything was analysis-ready.
+- Dropped irrelevant columns like `Ticket` and `Cabin`  
+- Filled missing values in `Age` and `Embarked`  
+- Converted categorical columns for model readiness
 
 ### 3. **Let’s Visualize!**
-I created a series of charts to better understand the relationships in the data:
+Created a series of insightful visualizations:
 
-- Bar plots for identifying the top 10 most populous countries 
-- A heatmap to see how features like fertility rate, migration, and median age are related   
-- Boxplots and histograms to explore outliers and distribution shapes   
-- Stacked bar charts to compare urban vs total population 
+- Bar plots and pie charts for survival distribution  
+- Count plots to compare `Sex`, `Pclass`, and `Embarked` vs `Survived`  
+- Histograms and boxplots to explore `Age`, `Fare`, and `Parch`  
+- Correlation heatmap to understand numerical feature relationships  
+
+### 4. **Modeling & Evaluation**
+Trained and compared multiple classification models:
+
+- **Logistic Regression**  
+- **Support Vector Machine (SVM)**  
+- **Naive Bayes**  
+- **K-Nearest Neighbors (KNN)**  
+- **Decision Tree**
+
+Evaluated them using accuracy scores and confusion matrices.
 
 ---
 
 ## 💡 Key Takeaways
 
-- **Population Concentration**: A few countries dominate the global population.
-- **Fertility vs Age**: Countries with higher fertility rates tend to have lower median ages.
-- **Urbanization**: Heavily urbanized nations also tend to have higher population densities.
-- **Outliers**: Migration and fertility show significant variations across countries.
+- **Gender Matters**: Females had a higher survival rate than males.  
+- **Class Counts**: Passengers in 1st class had significantly better survival chances.  
+- **Embarkation Point**: Passengers from Cherbourg (C) had higher survival rates.  
+- **Top Model**: Naive Bayes performed best among the models tested.
+
+---
+
+## 📊 Model Performance Summary
+
+| Model                   | Accuracy Score |
+|-------------------------|----------------|
+| Naive Bayes             | 0.76           |
+| Logistic Regression     | 0.75           |
+| Decision Tree           | 0.74           |
+| Support Vector Machines | 0.66           |
+| K-Nearest Neighbors     | 0.66           |
 
 ---
 
 ## 🎯 Conclusion
 
-This EDA task gave me a hands-on opportunity to explore a real-world dataset and apply core data analysis skills. I enjoyed finding stories in the numbers and turning them into visual insights. It also reinforced how vital the EDA phase is before diving into any advanced modeling.
+This task was a great exercise in cleaning real-world data, exploring relationships using EDA, and applying various classification algorithms to make predictions. It reinforced the importance of preprocessing and model comparison in data science workflows.
 
 ---
-
-
 
 Thanks for stopping by and reviewing my work! 😊
